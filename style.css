@@ -1,0 +1,65 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", -apple-system, sans-serif;
+  font-size: 15px;
+  height: 100vh;
+  background-color: white;
+  color: black;
+}
+
+main {
+  height: 100%;
+}
+
+.logo {
+  position: relative;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.logo svg {
+  position: relative;
+  max-width: 30%;
+  z-index: 1;
+}
+.logo svg.nav {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  animation: spin 1000s linear infinite;
+  z-index: 5;
+  animation-name: spin;
+  animation-duration: 15000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  /* transform: rotate(3deg); */
+  /* transform: rotate(0.3rad);/ */
+  /* transform: rotate(3grad); */
+  /* transform: rotate(.03turn);  */
+}
+.logo svg.nav path {
+  fill: none;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.center {
+  margin: auto;
+  width: 60%;
+  border: 3px solid #73AD21;
+  padding: 10px;
+  z-index: 10000;
+}
