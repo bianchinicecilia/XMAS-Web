@@ -1,26 +1,57 @@
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
 body {
   font-family: "Roboto", -apple-system, sans-serif;
   font-size: 15px;
+  /*height: 100vh;*/
 }
 
-.container {
-  height: 100vh;
-  width: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+main {
+  height: 100%;
 }
 
-.rounded_ellipse {
-  transform-origin: 50% 50%;
+.logo {
+  position: relative;
+  margin: 0 auto;
+  max-width: 400px;
 }
-.rounded_ellipse svg {
-  max-width: 50em;
+.logo .outer {
+  position: absolute;
+}
+.logo svg {
   display: block;
+  position: relative;
+  max-width: 400px;
+  z-index: 1;
+}
+.logo svg.nav {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  animation: spin 1000s linear infinite;
+  z-index: 5;
+  animation-name: spin;
+  animation-duration: 15000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  /* transform: rotate(3deg); */
+  /* transform: rotate(0.3rad);/ */
+  /* transform: rotate(3grad); */
+  /* transform: rotate(.03turn);  */
+}
+.logo svg.nav path {
+  fill: none;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
