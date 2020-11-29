@@ -1,50 +1,51 @@
+// Daniel Shiffman
+// http://codingtra.in
+// http://patreon.com/codingtrain
 
-//Pink
-var sketch1 = function(p) {
-  p.x = 100;
-  p.y = 100;
-  p.setup = function() {
-    p.createCanvas(200, 200);
-    /*p.background(51);*/
-  };
-  p.draw = function() {
-    p.fill(255, 0, 200, 25);
-    p.noStroke();
-    p.ellipse(p.x, p.y, 48, 48);
+// Video: https://youtu.be/3tTZlTq4Cxs
 
-    p.x = p.x + p.random(-10, 10);
-    p.y = p.y + p.random(-10, 10);
-  };
-};
+let angle = 0;
 
-//Yellow
-var sketch2 = function(p) {
-  p.x = 100;
-  p.y = 100;
-  p.setup = function() {
-    p.createCanvas(200, 200);
-    /*p.canvas.style('z-index', '-1');
-    p.background(51);*/
-  };
-  p.draw = function() {
-    p.fill(255, 200, 0, 25);
-    p.noStroke();
-    p.ellipse(p.x, p.y, 48, 48);
+let kitten;
 
-    p.x = p.x + p.random(-10, 10);
-    p.y = p.y + p.random(-10, 10);
-  };
-};
+let graphics;
 
-var myp5_3 = new p5();
+let love;
 
-var myp5_1 = new p5(sketch1);
-var myp5_2 = new p5(sketch2);
+function preload() {
+  kitten = loadImage('kittens/kitten2.jpg');
+}
 
-/*function resetBackground() {
-  myp5_1.x = myp5_1.width / 2;
-  myp5_1.y = myp5_1.height / 2;
-  myp5_1.background(51);
-}*/
+function setup() {
+  createCanvas(400, 300, WEBGL);
+  // graphics = createGraphics(300, 300);
+  //graphics.background(255);
 
-setInterval(resetBackground, 3000);
+  love = createGraphics(300, 300);
+  //love.background(255, 100);
+  love.fill(255);
+  love.textAlign(CENTER);
+  love.textSize(64);
+  love.text('love', 150, 150);
+}
+
+function draw() {
+  background(0);
+
+  // graphics.fill(255, 0, 255);
+  // graphics.ellipse(mouseX, mouseY, 20);
+  ambientLight(100);
+  directionalLight(255, 255, 255, 0, 0, 1);
+  rotateX(angle);
+  rotateY(angle * 1.3);
+  rotateZ(angle * 0.7);
+  //
+  // texture(love);
+  // box(100);
+
+  texture(love);
+
+  plane(300, 300);
+
+  angle += 0.03;
+}
