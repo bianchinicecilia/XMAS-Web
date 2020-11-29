@@ -11,7 +11,7 @@ body {
 
 .container {
   height: 100vh;
-  width: 100%;
+  width: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,6 +21,6 @@ body {
   transform-origin: 50% 50%;
 }
 .rounded_ellipse svg {
-  max-width: 150px;
+  max-width: 50em;
   display: block;
 }
