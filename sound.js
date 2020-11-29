@@ -16,7 +16,7 @@ function setup() {
   canvas = createCanvas (windowWidth, windowHeight, WEBGL);
   /*createCanvas(windowWidth, windowHeight,WEBGL);*/
   canvas.position (0, 0);
-  canvas.style('z-index', '-1');
+  canvas.style('z-index', '-3');
   song = loadSound('yume.mp3', loaded);
   amp = new p5.Amplitude();
   background('#F4EDED');
@@ -40,7 +40,7 @@ function draw() {
   background('#F4EDED');
 
   var vol = amp.getLevel();
-  var diam = map(vol, 0, 0.3, 300, 500);
+  var diam = map(vol, 0, 0.3, 370, 600);
 
   fill('#FFFFFF');
   noStroke();

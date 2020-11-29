@@ -1,31 +1,77 @@
-* {
-  padding: 0;
-  margin: 0;
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
+
+html {
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Roboto", -apple-system, sans-serif;
-  font-size: 15px;
-  height: 100vh;
-  background-color: white;
-  color: black;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
-main {
-  height: 100%;
+* {
+  margin: 0;
+}
+
+html,
+body {
+  min-height: 100vh;
+  font-family: "Roboto", -apple-system, sans-serif;
+  padding: 0 50px 0;
+}
+
+
+.containerSpinText {
+  -webkit-box-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  flex: 1;
+  overflow: hidden;
+  min-height: 100vh;
+  font-size: 1.2vw;
+  z-index: 10000;
+  position: relative;
+}
+
+/*Looping Text*/
+
+.circle {
+  border-radius: 50%;
+  height: 30em;
+  width: 30em;
+  position: relative;
+}
+
+
+@media (max-width: 600px) {
+
+  .containerSpinText {
+    margin-top: 0;
+    font-size: 3vw;
+  }
+
+}
+
+@media (prefers-color-scheme: dark) {
+  .containerSpinText {
+    /*background-color: #F4EDED;*/
+  }
+
 }
 
 .logo {
   position: relative;
-  margin: auto;
-  display: flex;
-  justify-content: center;
+  margin: 0 auto;
+  max-width: auto;
 }
-
 .logo svg {
+  display: block;
   position: relative;
-  max-width: 30%;
+  max-width: auto;
   z-index: 1;
 }
 .logo svg.nav {
@@ -56,10 +102,92 @@ main {
   }
 }
 
-.center {
-  margin: auto;
-  width: 60%;
-  border: 3px solid #73AD21;
-  padding: 10px;
-  z-index: 10000;
+/* MODAL */
+
+  .modalInfo {
+    /*position:relative;*/
+  }
+
+  .infoButton {
+    position:absolute;
+    top:0;
+    right:0;
+    z-index: 100000000;
+  }
+
+	.infoContainer {
+	  -webkit-box-align: center;
+	          align-items: center;
+	  display: -webkit-box;
+	  display: flex;
+	  -webkit-box-pack: center;
+	          justify-content: center;
+	  flex: 1;
+	  overflow: hidden;
+	  height: 100vh;
+	  font-size: 1.2vw;
+	}
+
+	/*Looping Text*/
+
+	.infoCircle {
+	  /*border-radius: 50%;
+	  height: 30em;
+	  width: 30em;*/
+	  position: relative;
+	}
+
+	.modal.right .modal-dialog {
+		position: fixed;
+		margin: auto;
+		width: 100%;
+		height: 100%;
+		-webkit-transform: translate3d(0%, 0, 0);
+		    -ms-transform: translate3d(0%, 0, 0);
+		     -o-transform: translate3d(0%, 0, 0);
+		        transform: translate3d(0%, 0, 0);
+		background-color: #E21118;
+	}
+
+	.modal.right .modal-content {
+		height: 100%;
+		overflow-y: auto;
+	}
+
+	.modal.right .modal-body {
+		margin: auto;
+		text-align: center;
+		color: white;
+		background-color: #E21118;
+		height: 100%;
+	}
+
+/*Right*/
+	.modal.right.fade .modal-dialog {
+		right: -320px;
+		-webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+		   -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+		     -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+		        transition: opacity 0.3s linear, right 0.3s ease-out;
+	}
+
+	.modal.right.fade.in .modal-dialog {
+		right: 0;
+	}
+
+/* ----- MODAL STYLE ----- */
+	.modal-content {
+		background-color: #E21118;
+		border-radius: 0;
+		border: none;
+	}
+
+	.modal-header {
+
+		border-bottom-style:none;
+	}
+
+.close {
+	color: #FFFFFF;
+	height: 100%;
 }
