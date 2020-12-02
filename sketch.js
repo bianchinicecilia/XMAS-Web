@@ -54,15 +54,16 @@ function draw() {
 
 
   // obj
-  /*let posX = width/2;
+  let posX = width/2;
   let posY = height/2;
 
   let angle = Math.atan2(mouseY-posY, mouseX-posX);
 
-  rotate(angle)*/
+  rotate(angle)
 
   extraCanvas.ambientLight(50);
   extraCanvas.directionalLight(255, 255, 255, 0, 0, 1);
+  //extraCanvas.translate(-100, 0, 0);
   extraCanvas.rotateZ(frameCount * 0.00005);
   extraCanvas.rotateX(frameCount * 0.00005);
   extraCanvas.rotateY(frameCount * 0.00005);
@@ -71,6 +72,7 @@ function draw() {
   extraCanvas.texture(kitten);
   extraCanvas.model(train);
   extraCanvas.noStroke();
+
 
   image(extraCanvas, 0, 0);
 
