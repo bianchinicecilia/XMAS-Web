@@ -54,6 +54,13 @@ function draw() {
 
 
   // obj
+  /*let posX = width/2;
+  let posY = height/2;
+
+  let angle = Math.atan2(mouseY-posY, mouseX-posX);
+
+  rotate(angle)*/
+
   extraCanvas.ambientLight(50);
   extraCanvas.directionalLight(255, 255, 255, 0, 0, 1);
   extraCanvas.rotateZ(frameCount * 0.00005);
