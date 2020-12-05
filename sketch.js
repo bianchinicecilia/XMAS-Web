@@ -58,9 +58,9 @@ function draw() {
 
   extraCanvas.push();
 
-  extraCanvas.rotateZ(frameCount * 0.005);
-  extraCanvas.rotateX(frameCount * 0.005);
-  extraCanvas.rotateY(frameCount * 0.005);
+  extraCanvas.rotateZ(frameCount * 0.01);
+  extraCanvas.rotateX(frameCount * 0.01);
+  extraCanvas.rotateY(frameCount * 0.01);
 
   // Rotate in direction of mouse
   let posX = width/6;
@@ -84,8 +84,10 @@ function draw() {
   extraCanvas.texture(kitten);
   extraCanvas.model(train);
 
-  //imageMode(CENTER);
+  //extraCanvas.imageMode(CENTER);
   image(extraCanvas, 0, 0);
+  extraCanvas.imageMode(CENTER);
+
 
   extraCanvas.pop();
 
