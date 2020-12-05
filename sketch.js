@@ -1,5 +1,3 @@
-
-
 var song;
 var button;
 var amp;
@@ -52,29 +50,44 @@ function draw() {
   noStroke();
   ellipse(width / 2, height / 2, diam, diam);
 
-
   // obj
-  let posX = width/2;
-  let posY = height/2;
-
-  let angle = Math.atan2(mouseY-posY, mouseX-posX);
-
-  rotate(angle)
 
   extraCanvas.ambientLight(50);
   extraCanvas.directionalLight(255, 255, 255, 0, 0, 1);
-  //extraCanvas.translate(-100, 0, 0);
-  extraCanvas.rotateZ(frameCount * 0.00005);
-  extraCanvas.rotateX(frameCount * 0.00005);
-  extraCanvas.rotateY(frameCount * 0.00005);
-  extraCanvas.clear();
-  extraCanvas.translate(0, 0, 0);
-  extraCanvas.texture(kitten);
-  extraCanvas.model(train);
   extraCanvas.noStroke();
 
+  extraCanvas.push();
 
+  extraCanvas.rotateZ(frameCount * 0.005);
+  extraCanvas.rotateX(frameCount * 0.005);
+  extraCanvas.rotateY(frameCount * 0.005);
+
+  // Rotate in direction of mouse
+  let posX = width/6;
+  let posY = height/6;
+
+  let angle = Math.atan2(mouseY-posY, mouseX-posX);
+
+  // Rotate on MouseDrag
+  /*let angle = 0;
+
+  if (mouseIsPressed) {
+    angle =  atan2(mouseY - height / 2, mouseX - width / 2);
+  }*/
+
+  extraCanvas.rotateX(angle);
+  extraCanvas.rotateY(angle);
+  extraCanvas.rotateZ(angle);
+
+  //extraCanvas.translate(-100, 0, 0);
+  extraCanvas.clear();
+  extraCanvas.texture(kitten);
+  extraCanvas.model(train);
+
+  //imageMode(CENTER);
   image(extraCanvas, 0, 0);
+
+  extraCanvas.pop();
 
 }
 
