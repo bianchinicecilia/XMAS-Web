@@ -17,10 +17,30 @@ html {
 html,
 body {
   min-height: 100vh;
-  font-family: "Roboto", -apple-system, sans-serif;
+  font-family: BasisGrotesquePro-Regular;
   padding: 0 50px 0;
 }
 
+/* FONT */
+
+@font-face {
+  font-family: BasisGrotesquePro-Regular;
+  src: url('BasisGrotesquePro-Regular.otf');
+}
+
+@font-face {
+  font-family: BasisGrotesquePro-Italic;
+  src: url('BasisGrotesquePro-Italic.otf');
+}
+
+.circle {
+  border-radius: 50%;
+  height: 25em;
+  width: 25em;
+  position: relative;
+}
+
+/*Looping Text*/
 
 .containerSpinText {
   -webkit-box-align: center;
@@ -32,20 +52,10 @@ body {
   flex: 1;
   overflow: hidden;
   min-height: 100vh;
-  font-size: 1.2vw;
-  z-index: 10000;
+  font-family: BasisGrotesquePro-Regular;
+  font-size: 1.4vw;
   position: relative;
 }
-
-/*Looping Text*/
-
-.circle {
-  border-radius: 50%;
-  height: 31em;
-  width: 31em;
-  position: relative;
-}
-
 
 @media (max-width: 600px) {
 
@@ -56,30 +66,22 @@ body {
 
 }
 
-@media (prefers-color-scheme: dark) {
-  .containerSpinText {
-    /*background-color: #F4EDED;*/
-  }
-
-}
-
 .logo {
   position: relative;
   margin: 0 auto;
-  max-width: auto;
+  max-width: 100%;
 }
 .logo svg {
   display: block;
   position: relative;
-  max-width: auto;
-  z-index: 1;
+  max-width: 100%;
 }
 .logo svg.nav {
   cursor: pointer;
   position: absolute;
   top: 0;
   animation: spin 1000s linear infinite;
-  z-index: 5;
+  z-index: 2;
   animation-name: spin;
   animation-duration: 15000ms;
   animation-iteration-count: infinite;
@@ -91,7 +93,9 @@ body {
 }
 .logo svg.nav path {
   fill: none;
+  /*fill: #81a832;*/
 }
+
 
 @keyframes spin {
   from {
@@ -102,6 +106,57 @@ body {
   }
 }
 
+/* Circle Modal */
+
+.containerSpinText2 {
+  -webkit-box-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  flex: 1;
+  overflow: hidden;
+  min-height: 100vh;
+  font-family: BasisGrotesquePro-Regular;
+  font-size: 1.4vw;
+  position: relative;
+}
+
+@media (max-width: 600px) {
+
+  .containerSpinText2 {
+    margin-top: 0;
+    font-size: 3vw;
+    color: white;
+  }
+
+}
+
+.logo2 {
+  position: relative;
+  margin: 0 auto;
+  max-width: auto;
+}
+.logo2 svg {
+  display: block;
+  position: relative;
+  max-width: auto;
+}
+.logo2 svg.nav {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+}
+.logo2 svg.nav path {
+  fill: none;
+  /*fill: #81a832;*/
+}
+
+.logo2 svg.nav text {
+  fill: white;
+}
+
 /* MODAL */
 
   .modalInfo {
@@ -110,9 +165,17 @@ body {
 
   .infoButton {
     position:absolute;
-    top:0;
-    right:0;
+    top:10px;
+    right:10px;
     z-index: 100000000;
+    background-color: Transparent;
+    color: #E21118;
+    font-size: 2.5em;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
   }
 
 	.infoContainer {
@@ -125,10 +188,8 @@ body {
 	  flex: 1;
 	  overflow: hidden;
 	  height: 100vh;
-	  font-size: 1.2vw;
+    z-index: 1000;
 	}
-
-	/*Looping Text*/
 
 	.infoCircle {
 	  /*border-radius: 50%;
@@ -160,7 +221,12 @@ body {
 		color: white;
 		background-color: #E21118;
 		height: 100%;
+    padding: 0;
 	}
+
+  .modal-header {
+    padding: 0;
+  }
 
 /*Right*/
 	.modal.right.fade .modal-dialog {
@@ -183,11 +249,52 @@ body {
 	}
 
 	.modal-header {
-
+    position:relative;
+    z-index: 100000000;
 		border-bottom-style:none;
 	}
 
 .close {
 	color: #FFFFFF;
 	height: 100%;
+  font-size: 30px;
+}
+
+.letter {
+  position: absolute;
+  z-index: 10000000;
+  font-size: 0.89em;
+}
+
+.ita {
+  font-family: BasisGrotesquePro-Italic;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width : 240px) and (max-width : 550px) {
+.letter {
+  font-size: 1.2em;
+}
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width : 550px) and (max-width : 1024px) {
+.letter {
+  font-size: 1.8em;
+}
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+.letter {
+  font-size: 1.2em;
+}
+}
+
+.buttonObj {
+  color: white;
+}
+
+.buttonObj:hover {
+  color: white;
 }

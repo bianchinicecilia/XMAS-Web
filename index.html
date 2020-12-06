@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>XMas 2020</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
   <link rel="stylesheet" href="./style.css">
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
 
@@ -15,11 +15,17 @@
 </head>
 <body>
 <!-- partial:index.partial.html -->
+  <!--<span class="content-item thumb-rollover">
+    <span style="background-color:#F3F3F3;" class="dot"></span>
+    <span class="contents-hex-wrapper">
+      #F3F3F3
+    </span>
+  </span>-->
 
   <div class="containerSpinText">
       <div class="circle">
         <div class="logo">
-          <svg viewBox="0 0 141 141" class="nav">
+          <svg viewBox="0 0 145 145" class="nav">
 
           <path id="SVGID_x5F_3_x5F_" class="st0" d="M92.3,14.6c30.9,12,46.1,46.8,34.1,77.7c-12,30.9-46.8,46.1-77.7,34.1
           c-30.9-12-46.1-46.8-34.1-77.7S61.4,2.6,92.3,14.6z"/>
@@ -30,45 +36,59 @@
       </div>
   </div>
 
-    <div class="modalInfo">
-      <button class="infoButton" data-toggle="modal" data-target="#myModal2">
-        ?
-      </button>
+  <div class="modalInfo">
+	<button class="infoButton" data-toggle="modal" data-target="#myModal2">
+		?
+	</button>
 
-      <!-- Modal -->
-      <div class="modal right fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
+	<!-- Modal -->
+	<div class="modal right fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
 
-            <!--<div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">¿</span></button>
-            </div>-->
+				<!--<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				</div>-->
 
-            <div class="modal-body">
-              <div class="infoContainer">
-                  <div class="infoCircle">
-                    <p>
+				<div class="modal-body">
+					<div class="infoContainer">
+							<div class="infoCircle">
+                <div class="containerSpinText2">
+                  <p class="letter">
 
-                    Dear Luke and Jody, <br>
-                    Have a holly jolly Christmas. <br>
-                    Here's a little present:<br><br>
+                  Dear Luke and Jody, <br>
+                  I wish you a lovely Christmas. <br> The best you could have, <br> in this almost post-pandemic world. <br><br>
+                  Here's a little present:<br><br>
 
-                    Snowstorm Aloe<br>
+                  Snowstorm Aloe<br>
 
-                    Shot on: 05/12/20<br>
-                    Where: London Fields<br>
-                    Origin: Africa, Madagascar<br><br>
+                  Shot on: 06th December 2020<br>
+                  Where: Broadway Market, London<br>
+                  Origin: Africa, Madagascar<br><br>
+                  <a href="SnowstormAloe.obj" download="Snowstorm Aloe .obj" class="buttonObj">Download OBJ</a>
 
-                    Download OBJ
-                    </p>
+                  </p>
+                <div class="circle">
+                  <div class="logo2">
+                    <svg viewBox="0 0 145 145" class="nav">
+
+                    <path id="SVGID_x5F_3_x5F_" class="st0" d="M92.3,14.6c30.9,12,46.1,46.8,34.1,77.7c-12,30.9-46.8,46.1-77.7,34.1
+                    c-30.9-12-46.1-46.8-34.1-77.7S61.4,2.6,92.3,14.6z"/>
+                    <text><textPath  xlink:href="#SVGID_x5F_3_x5F_">
+                    <tspan>Christmas 2020. Have a holly jolly one! :)</tspan></textPath>
+                  </text>
                   </div>
-              </div>
-            </div>
+                </div>
+                </div>
 
-          </div><!-- modal-content -->
-        </div><!-- modal-dialog -->
-      </div><!-- modal -->
-    </div>
+							</div>
+					</div>
+				</div>
+
+				</div><!-- modal-content -->
+			</div><!-- modal-dialog -->
+		</div><!-- modal -->
+	</div>
 
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js'></script><script  src="./script.js"></script>

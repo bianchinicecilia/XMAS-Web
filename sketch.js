@@ -12,7 +12,7 @@ let train;
 
 function preload() {
   kitten = loadImage('kittens/kitten2.jpg');
-  train = loadModel('train-corrected.obj');
+  train = loadModel('SnowstormAloe.obj');
 }
 
 function windowResized() {
@@ -31,12 +31,12 @@ function setup() {
 }
 
 function loaded() {
-  button = createButton('play');
+  button = createButton('Play');
   button.mousePressed(togglePlaying);
-  button.position(10,10);
+  button.position(15,15);
   button.style('background-color', '#F4EDED');
   button.style('color:#E21118');
-  button.style('font-size', '1.5em');
+  button.style('font-size', '1.9em');
 }
 
 function draw() {
@@ -84,9 +84,10 @@ function draw() {
   extraCanvas.texture(kitten);
   extraCanvas.model(train);
 
+  imageMode(CENTER)
+  image(extraCanvas, width / 2, height / 2);
+  //image(extraCanvas, 0, 0);
   //extraCanvas.imageMode(CENTER);
-  image(extraCanvas, 0, 0);
-  extraCanvas.imageMode(CENTER);
 
 
   extraCanvas.pop();
@@ -97,9 +98,9 @@ function togglePlaying() {
   if (!song.isPlaying()) {
     song.play();
     song.setVolume(0.3);
-    button.html('pause');
+    button.html('Pause');
   } else {
     song.stop();
-    button.html('play');
+    button.html('Play');
   }
 }
