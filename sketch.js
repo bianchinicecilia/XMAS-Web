@@ -7,13 +7,18 @@ var showInfo = false;
 let angle;
 let extraCanvas;
 
-let kitten;
-let train;
+let texture;
+let aloe;
 
 
 function preload() {
+<<<<<<< Updated upstream
   kitten = loadImage('ModelSnowStorm-flip.jpg');
   train = loadModel('SnowStorm_Low.obj');
+=======
+  texture = loadImage('ModelSnowStorm.jpg');
+  aloe = loadModel('SnowStorm_Low.obj');
+>>>>>>> Stashed changes
 }
 
 function windowResized() {
@@ -50,7 +55,7 @@ function draw() {
   background('#F4EDED');
 
   var vol = amp.getLevel();
-  var diam = map(vol, 0, 0.3, 370, 600);
+  var diam = map(vol, 0, 0.3, 350, 450);
 
   fill('#FFFFFF');
   noStroke();
@@ -63,15 +68,17 @@ function draw() {
 
   // obj
 
-  extraCanvas.ambientLight(50);
-  extraCanvas.directionalLight(255, 255, 255, 0, 0, 1);
+  extraCanvas.ambientLight(30);
+  extraCanvas.directionalLight(255, 255, 255, -80, 80, 7);
+  extraCanvas.directionalLight(255, 255, 255, 180, 80, 7);
+  extraCanvas.directionalLight(86, 54, 2, 0, 60, 5);
   extraCanvas.noStroke();
 
   extraCanvas.push();
 
-  extraCanvas.rotateZ(frameCount * 0.003);
-  extraCanvas.rotateX(frameCount * 0.005);
-  extraCanvas.rotateY(frameCount * 0.003);
+  extraCanvas.rotateZ(frameCount * 0.001);
+  extraCanvas.rotateX(frameCount * 0.003);
+  extraCanvas.rotateY(frameCount * 0.001);
 
   // Rotate in direction of mouse
   let posX = width/6;
@@ -92,11 +99,11 @@ function draw() {
 
   //extraCanvas.translate(-100, 0, 0);
   extraCanvas.clear();
-  extraCanvas.texture(kitten);
-  extraCanvas.model(train);
+  extraCanvas.texture(texture);
+  extraCanvas.model(aloe);
 
   imageMode(CENTER)
-  image(extraCanvas, width / 2, height / 2);
+  image(extraCanvas, width / 2 +2, height / 2 +5);
   //image(extraCanvas, 0, 0);
   //extraCanvas.imageMode(CENTER);
 
