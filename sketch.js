@@ -12,7 +12,7 @@ let train;
 
 
 function preload() {
-  kitten = loadImage('ModelSnowStorm.jpg');
+  kitten = loadImage('ModelSnowStorm-flip.jpg');
   train = loadModel('SnowStorm_Low.obj');
 }
 
