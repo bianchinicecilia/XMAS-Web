@@ -12,6 +12,7 @@
   <script language="javascript" src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/addons/p5.sound.min.js"></script>
   <script language="javascript" type="text/javascript" src="sketch.js"></script>
 
+
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -25,11 +26,11 @@
   <div class="containerSpinText">
       <div class="circle">
         <div class="logo">
-          <svg viewBox="0 0 145 145" class="nav">
+          <svg id='cerchio-rotante'  viewBox="0 0 145 145" class="nav">
 
           <path id="SVGID_x5F_3_x5F_" class="st0" d="M92.3,14.6c30.9,12,46.1,46.8,34.1,77.7c-12,30.9-46.8,46.1-77.7,34.1
           c-30.9-12-46.1-46.8-34.1-77.7S61.4,2.6,92.3,14.6z"/>
-          <text><textPath  xlink:href="#SVGID_x5F_3_x5F_">
+          <text id='testo'><textPath  xlink:href="#SVGID_x5F_3_x5F_">
           <tspan>Christmas 2020. Have a holly jolly one! :)</tspan></textPath>
           </text>
           </div>
@@ -37,7 +38,7 @@
   </div>
 
   <div class="modalInfo">
-	<button class="infoButton" data-toggle="modal" data-target="#myModal2">
+	<button onclick='addColor()' class="infoButton" data-toggle="modal" data-target="#myModal2">
 		?
 	</button>
 
@@ -47,7 +48,7 @@
 			<div class="modal-content">
 
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<button onclick='removeColor()' type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 				</div>
 
 				<div class="modal-body">
@@ -70,13 +71,7 @@
                   </p>
                 <div class="circle">
                   <div class="logo2">
-                    <svg viewBox="0 0 145 145" class="nav">
 
-                    <path id="SVGID_x5F_3_x5F_" class="st0" d="M92.3,14.6c30.9,12,46.1,46.8,34.1,77.7c-12,30.9-46.8,46.1-77.7,34.1
-                    c-30.9-12-46.1-46.8-34.1-77.7S61.4,2.6,92.3,14.6z"/>
-                    <text><textPath  xlink:href="#SVGID_x5F_3_x5F_">
-                    <tspan>Christmas 2020. Have a holly jolly one! :)</tspan></textPath>
-                  </text>
                   </div>
                 </div>
                 </div>
@@ -95,5 +90,13 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
   <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
 
+<script type="text/javascript">
+  function addColor(){
+  document.getElementById('testo').classList.add('white');
+  }
+  function removeColor(){
+  document.getElementById('testo').classList.remove('white');
+  }
+</script>
 </body>
 </html>

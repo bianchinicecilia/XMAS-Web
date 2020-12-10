@@ -17,8 +17,9 @@ html {
 html,
 body {
   min-height: 100vh;
+  width:100%,
   font-family: BasisGrotesquePro-Regular;
-  padding: 0 50px 0;
+  padding: 0;
 }
 
 /* FONT */
@@ -76,12 +77,16 @@ body {
   position: relative;
   max-width: 100%;
 }
+.white{
+  fill:white;
+  transition: .3s;
+}
 .logo svg.nav {
   cursor: pointer;
   position: absolute;
   top: 0;
   animation: spin 1000s linear infinite;
-  z-index: 2;
+  z-index: 100;
   animation-name: spin;
   animation-duration: 15000ms;
   animation-iteration-count: infinite;
@@ -114,13 +119,13 @@ body {
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: center;
-          justify-content: center;
-  flex: 1;
-  overflow: hidden;
-  min-height: 100vh;
-  font-family: BasisGrotesquePro-Regular;
-  font-size: 1.4vw;
-  position: relative;
+            justify-content: center;
+      flex: 1;
+      overflow: hidden;
+      min-height: 100vh;
+      font-family: BasisGrotesquePro-Regular;
+      font-size: 1.4vw;
+      position: relative;
 }
 
 @media (max-width: 600px) {
@@ -167,7 +172,7 @@ body {
     position:absolute;
     top:10px;
     right:10px;
-    z-index: 100000000;
+    z-index: 2;
     background-color: Transparent;
     color: #E21118;
     font-size: 2.5em;
@@ -188,6 +193,7 @@ body {
 	  flex: 1;
 	  overflow: hidden;
 	  height: 100vh;
+    width:100%;
     z-index: 1000;
 	}
 
@@ -223,15 +229,21 @@ body {
 		height: 100%;
     padding: 0;
 	}
+  .modal{
+    z-index: 3 !important;
+  }
+  .modal-backdrop{
+    display: none;
+  }
 
 
 /*Right*/
 	.modal.right.fade .modal-dialog {
-		right: -320px;
-		-webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
-		   -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
-		     -o-transition: opacity 0.3s linear, right 0.3s ease-out;
-		        transition: opacity 0.3s linear, right 0.3s ease-out;
+		/* right: -320px; */
+		-webkit-transition: opacity 0.3s linear, right 0s ease-out;
+		   -moz-transition: opacity 0.3s linear, right 0s ease-out;
+		     -o-transition: opacity 0.3s linear, right 0s ease-out;
+		        transition: opacity 0.3s linear, right 0s ease-out;
 	}
 
 	.modal.right.fade.in .modal-dialog {
@@ -246,7 +258,8 @@ body {
 	}
 
 	.modal-header {
-    position:relative;
+    position:absolute;
+    width:100%;
     z-index: 100000000;
 		border-bottom-style:none;
     padding: 60;
@@ -256,6 +269,15 @@ body {
 	color: #FFFFFF;
 	height: 100%;
   font-size: 80px;
+}
+.modal-header .close {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    z-index: 2;
+    font-size: 2.5em;
+    color: white;
+    opacity: 1;
 }
 
 .letter {
