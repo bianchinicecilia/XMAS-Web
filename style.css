@@ -224,9 +224,6 @@ body {
     padding: 0;
 	}
 
-  .modal-header {
-    padding: 0;
-  }
 
 /*Right*/
 	.modal.right.fade .modal-dialog {
@@ -252,12 +249,13 @@ body {
     position:relative;
     z-index: 100000000;
 		border-bottom-style:none;
+    padding: 60;
 	}
 
 .close {
 	color: #FFFFFF;
 	height: 100%;
-  font-size: 30px;
+  font-size: 80px;
 }
 
 .letter {

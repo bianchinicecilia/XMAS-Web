@@ -2,6 +2,7 @@ var song;
 var button;
 var amp;
 var canvas;
+var showInfo = false;
 
 let angle;
 let extraCanvas;
@@ -11,8 +12,8 @@ let train;
 
 
 function preload() {
-  kitten = loadImage('kittens/kitten2.jpg');
-  train = loadModel('SnowstormAloe.obj');
+  kitten = loadImage('ModelSnowStorm.jpg');
+  train = loadModel('SnowStorm_Low.obj');
 }
 
 function windowResized() {
@@ -33,10 +34,15 @@ function setup() {
 function loaded() {
   button = createButton('Play');
   button.mousePressed(togglePlaying);
+  button.mouseOver(onMouseOver);
+  button.mouseOut(onMouseOut);
   button.position(15,15);
   button.style('background-color', '#F4EDED');
   button.style('color:#E21118');
   button.style('font-size', '1.9em');
+  button.style('border', '0');
+  button.style('fill', '0');
+  button.style('outline', 'none');
 }
 
 function draw() {
@@ -49,6 +55,11 @@ function draw() {
   fill('#FFFFFF');
   noStroke();
   ellipse(width / 2, height / 2, diam, diam);
+    if(showInfo) {
+      let s = 'Yume Miru Kokoro by Riki Miyagawa, \nJapan 1934. \nThis could loop all morning.';
+      fill(50);
+      text(s, 110, 20, 250, 80); // Text wraps within text box
+    }
 
   // obj
 
@@ -58,9 +69,9 @@ function draw() {
 
   extraCanvas.push();
 
-  extraCanvas.rotateZ(frameCount * 0.01);
-  extraCanvas.rotateX(frameCount * 0.01);
-  extraCanvas.rotateY(frameCount * 0.01);
+  extraCanvas.rotateZ(frameCount * 0.003);
+  extraCanvas.rotateX(frameCount * 0.005);
+  extraCanvas.rotateY(frameCount * 0.003);
 
   // Rotate in direction of mouse
   let posX = width/6;
@@ -103,4 +114,11 @@ function togglePlaying() {
     song.stop();
     button.html('Play');
   }
+}
+
+function onMouseOver() {
+  showInfo = true;
+}
+function onMouseOut(){
+  showInfo = false;
 }
