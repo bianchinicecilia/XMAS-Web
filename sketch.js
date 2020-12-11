@@ -63,8 +63,10 @@ function draw() {
 
   // obj
 
-  extraCanvas.ambientLight(50);
-  extraCanvas.directionalLight(255, 255, 255, 0, 0, 1);
+  extraCanvas.ambientLight(30);
+  extraCanvas.directionalLight(255, 255, 255, 0, 80, 15);
+  extraCanvas.directionalLight(255, 255, 255, 0, -180, 5);
+  extraCanvas.directionalLight(86, 54, 2, 0, 0, 1);
   extraCanvas.noStroke();
 
   extraCanvas.push();
