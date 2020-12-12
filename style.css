@@ -103,6 +103,19 @@ body {
 
 }
 
+@media (max-width: 600px) {
+
+  .logo {
+    margin: 0 auto;
+    min-width: auto;
+    border-radius: 50%;
+    height: 20em;
+    width: 20em;
+    position: relative;
+  }
+
+}
+
 
 @keyframes spin {
   from {
@@ -273,7 +286,7 @@ body {
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-width : 240px) and (max-width : 550px) {
 .letter {
-  font-size: 1.2em;
+  font-size: 0.85em;
 }
 }
 
