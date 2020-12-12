@@ -107,6 +107,10 @@ function draw() {
 
 }
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
 function togglePlaying() {
   if (!song.isPlaying()) {
     song.play();
@@ -123,8 +127,4 @@ function onMouseOver() {
 }
 function onMouseOut(){
   showInfo = false;
-}
-
-function windowResized(){
-  resizeCanvas(windowWidth, windowHeight);
 }
