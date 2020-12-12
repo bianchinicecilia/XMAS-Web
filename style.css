@@ -32,17 +32,8 @@
   overflow: hidden;
   height: 100vh;
   font-family: BasisGrotesquePro-Regular;
-  font-size: 20px;
+  font-size: 20.1px;
   position: relative;
-}
-
-@media (max-width: 600px) {
-
-  .containerSpinText {
-    margin-top: 0;
-    font-size: 18px;
-  }
-
 }
 
 .logo {
@@ -66,7 +57,7 @@
   position: absolute;
   top: 0;
   animation: spin 1000s linear infinite;
-  z-index: 100;
+  z-index: 4;
   animation-name: spin;
   animation-duration: 15000ms;
   animation-iteration-count: infinite;
@@ -88,8 +79,8 @@
     margin: 0 auto;
     min-width: auto;
     border-radius: 50%;
-    height: 20em;
-    width: 20em;
+    height: 18em;
+    width: 18em;
     position: relative;
   }
 
@@ -105,34 +96,6 @@
   }
 }
 
-
-/* Circle Modal */
-
-.containerSpinText2 {
-  -webkit-box-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-pack: center;
-            justify-content: center;
-      flex: 1;
-      overflow: hidden;
-      min-height: 100vh;
-      font-family: BasisGrotesquePro-Regular;
-      font-size: 1.4vw;
-      position: relative;
-}
-
-@media (max-width: 600px) {
-
-  .containerSpinText2 {
-    margin-top: 0;
-    font-size: 3vw;
-    color: white;
-  }
-
-}
-
 /* MODAL */
 
   .modalInfo {
@@ -143,7 +106,6 @@
     position:absolute;
     top:10px;
     right:10px;
-    z-index: 2;
     background-color: Transparent;
     color: #E21118;
     font-size: 2.5em;
@@ -166,10 +128,6 @@
 	  height: 100vh;
     width:100%;
     z-index: 1000;
-	}
-
-	.infoCircle {
-	  position: relative;
 	}
 
 	.modal.right .modal-dialog {
@@ -198,7 +156,7 @@
     padding: 0;
 	}
   .modal{
-    z-index: 3 !important;
+    z-index: 3;
   }
   .modal-backdrop{
     display: none;
@@ -228,7 +186,6 @@
 	.modal-header {
     position:absolute;
     width:100%;
-    z-index: 100000000;
 		border-bottom-style:none;
     padding: 60;
 	}
@@ -251,12 +208,11 @@
 
 .letter {
   position: relative;
-  z-index: 4 !important;
-  font-size: 0.72em;
+  font-size: 0.95em;
 }
 
 p {
-  margin: 0 !important;
+  margin: 0;
 }
 
 .ita {
