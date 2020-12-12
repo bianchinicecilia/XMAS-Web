@@ -261,7 +261,7 @@
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-width : 240px) and (max-width : 550px) {
 .letter {
-  font-size: 0.65em;
+  font-size: 0.75em;
 }
 }
 
