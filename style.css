@@ -34,12 +34,12 @@ body {
   src: url('BasisGrotesquePro-Italic.otf');
 }
 
-.circle {
+/*.circle {
   border-radius: 50%;
-  height: 25em;
-  width: 25em;
+  height: 26em;
+  width: 26em;
   position: relative;
-}
+}*/
 
 /*Looping Text*/
 
@@ -54,7 +54,7 @@ body {
   overflow: hidden;
   min-height: 100vh;
   font-family: BasisGrotesquePro-Regular;
-  font-size: 1.4vw;
+  font-size: 20px;
   position: relative;
 }
 
@@ -62,20 +62,22 @@ body {
 
   .containerSpinText {
     margin-top: 0;
-    font-size: 3vw;
+    font-size: 18px;
   }
 
 }
 
 .logo {
-  position: relative;
   margin: 0 auto;
-  max-width: 100%;
+  min-width: auto;
+  border-radius: 50%;
+  height: 26em;
+  width: 26em;
+  position: relative;
 }
 .logo svg {
   display: block;
   position: relative;
-  max-width: 100%;
 }
 .white{
   fill:white;
@@ -98,7 +100,7 @@ body {
 }
 .logo svg.nav path {
   fill: none;
-  /*fill: #81a832;*/
+
 }
 
 
@@ -110,6 +112,7 @@ body {
     transform: rotate(360deg);
   }
 }
+
 
 /* Circle Modal */
 
@@ -136,30 +139,6 @@ body {
     color: white;
   }
 
-}
-
-.logo2 {
-  position: relative;
-  margin: 0 auto;
-  max-width: auto;
-}
-.logo2 svg {
-  display: block;
-  position: relative;
-  max-width: auto;
-}
-.logo2 svg.nav {
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-}
-.logo2 svg.nav path {
-  fill: none;
-  /*fill: #81a832;*/
-}
-
-.logo2 svg.nav text {
-  fill: white;
 }
 
 /* MODAL */
@@ -278,12 +257,13 @@ body {
     font-size: 2.5em;
     color: white;
     opacity: 1;
+    font-family: BasisGrotesquePro-Regular;
 }
 
 .letter {
-  position: absolute;
+  position: relative;
   z-index: 10000000;
-  font-size: 0.89em;
+  font-size: 0.68em;
 }
 
 .ita {

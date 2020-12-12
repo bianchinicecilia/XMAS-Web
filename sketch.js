@@ -50,7 +50,7 @@ function draw() {
   background('#F4EDED');
 
   var vol = amp.getLevel();
-  var diam = map(vol, 0, 0.3, 350, 500);
+  var diam = map(vol, 0, 0.3, 360, 500);
 
   fill('#FFFFFF');
   noStroke();
@@ -123,4 +123,8 @@ function onMouseOver() {
 }
 function onMouseOut(){
   showInfo = false;
+}
+
+function windowResized(){
+  resizeCanvas(windowWidth, windowHeight);
 }
