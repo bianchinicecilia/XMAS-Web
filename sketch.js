@@ -59,7 +59,7 @@ function draw() {
       let s = 'Yume Miru Kokoro by Riki Miyagawa, \nJapan 1934. \nThis could loop all morning.';
       fill(50);
       text(s, 105, 20, 250, 80); // Text wraps within text box
-    }
+  }
 
   // obj
 

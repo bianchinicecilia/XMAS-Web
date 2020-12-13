@@ -73,17 +73,28 @@
 
 }
 
-@media (max-width: 600px) {
-
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width : 240px) and (max-width : 550px) {
   .logo {
-    margin: 0 auto;
-    min-width: auto;
-    border-radius: 50%;
     height: 19em;
     width: 19em;
-    position: relative;
   }
+}
 
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width : 550px) and (max-width : 1024px) {
+  .logo {
+    height: 30em;
+    width: 30em;
+  }
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+  .logo {
+    height: 28em;
+    width: 28em;
+  }
 }
 
 
@@ -229,14 +240,14 @@ p {
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-width : 550px) and (max-width : 1024px) {
 .letter {
-  font-size: 1.8em;
+  font-size: 1.12em;
 }
 }
 
 /* Large screens ----------- */
 @media only screen  and (min-width : 1824px) {
 .letter {
-  font-size: 1.2em;
+  font-size: 1.12em;
 }
 }
 
