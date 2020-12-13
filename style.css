@@ -40,8 +40,8 @@
   margin: 0 auto;
   min-width: auto;
   border-radius: 50%;
-  height: 26em;
-  width: 26em;
+  height: 27em;
+  width: 27em;
   position: relative;
 }
 .logo svg {
@@ -63,6 +63,7 @@
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   overflow:visible;
+  pointer-events: none;
   /* transform: rotate(3deg); */
   /* transform: rotate(0.3rad);/ */
   /* transform: rotate(3grad); */
@@ -76,8 +77,8 @@
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-width : 240px) and (max-width : 550px) {
   .logo {
-    height: 19em;
-    width: 19em;
+    height: 17em;
+    width: 17em;
   }
 }
 
@@ -211,7 +212,7 @@
     position: absolute;
     top: 20px;
     right: 15px;
-    z-index: 2;
+    z-index: 100000000;
     font-size: 2.5em;
     color: white;
     opacity: 1;
@@ -234,7 +235,7 @@ p {
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-width : 240px) and (max-width : 550px) {
 .letter {
-  font-size: 0.73em;
+  font-size: 0.68em;
 }
 }
 
@@ -252,10 +253,10 @@ p {
 }
 }
 
-.download {
+/*.download {
   position: fixed;
   top: 0;
-}
+}*/
 
 .buttonObj {
   color: white;
