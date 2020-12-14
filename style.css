@@ -13,6 +13,7 @@
 }
 
 html, body {
+  max-height: 100vh;
   overscroll-behavior: none;
 }
 
