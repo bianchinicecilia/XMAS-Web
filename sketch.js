@@ -40,7 +40,7 @@ function loaded() {
   button.position(15,15);
   button.style('background-color', '#F4EDED');
   button.style('color:#E21118');
-  button.style('font-size', '1.9em');
+  button.style('font-size', '2.3em');
   button.style('border', '0');
   button.style('background', 'none');
   button.style('outline', 'none');
@@ -51,7 +51,7 @@ function draw() {
   background('#F4EDED');
 
   var vol = amp.getLevel();
-  var diam = map(vol, 0, 0.3, 380, 500);
+  var diam = map(vol, 0, 0.3, 0.57 * height, 0.77 * height);
 
   fill('#FFFFFF');
   noStroke();
@@ -59,7 +59,7 @@ function draw() {
     if(showInfo) {
       let s = 'Yume Miru Kokoro by Riki Miyagawa, \nJapan 1934. \nThis could loop all morning.';
       fill(50);
-      text(s, 105, 20, 250, 80); // Text wraps within text box
+      text(s, 125, 25, 250, 80); // Text wraps within text box
   }
 
   // obj

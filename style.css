@@ -98,8 +98,8 @@ html, body {
 /* Large screens ----------- */
 @media only screen  and (min-width : 1824px) {
   .logo {
-    height: 28em;
-    width: 28em;
+    height: 35em;
+    width: 35em;
   }
 }
 
@@ -254,7 +254,7 @@ p {
 /* Large screens ----------- */
 @media only screen  and (min-width : 1824px) {
 .letter {
-  font-size: 1.1em;
+  font-size: 1.3em;
 }
 }
 
