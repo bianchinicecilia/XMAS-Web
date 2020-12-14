@@ -157,6 +157,7 @@ html, body {
 		     -o-transform: translate3d(0%, 0, 0);
 		        transform: translate3d(0%, 0, 0);
 		background-color: #E21118;
+    overflow: hidden;
 	}
 
 	.modal.right .modal-content {
