@@ -12,6 +12,10 @@
   src: url('BasisGrotesquePro-Italic.otf');
 }
 
+html, body {
+  overscroll-behavior: none;
+}
+
 /*.circle {
   border-radius: 50%;
   height: 26em;

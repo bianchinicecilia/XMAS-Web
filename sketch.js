@@ -21,6 +21,7 @@ function windowResized() {
 }
 
 function setup() {
+  pixelDensity(3);
   canvas = createCanvas (windowWidth, windowHeight);
   canvas.position (0, 0);
   canvas.style('z-index', '-3');
