@@ -157,7 +157,6 @@ html, body {
 		     -o-transform: translate3d(0%, 0, 0);
 		        transform: translate3d(0%, 0, 0);
 		background-color: #E21118;
-    overflow: hidden;
 	}
 
 	.modal.right .modal-content {
@@ -176,6 +175,7 @@ html, body {
 	}
   .modal{
     z-index: 3;
+    overflow: hidden;
   }
   .modal-backdrop{
     display: none;
@@ -200,6 +200,7 @@ html, body {
 		background-color: #E21118;
 		border-radius: 0;
 		border: none;
+    overflow: hidden;
 	}
 
 	.modal-header {
